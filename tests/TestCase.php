@@ -2,9 +2,9 @@
 
 namespace Brondby\Roboticket\Tests;
 
+use Brondby\Roboticket\RoboticketServiceProvider;
 use Illuminate\Database\Eloquent\Factories\Factory;
 use Orchestra\Testbench\TestCase as Orchestra;
-use Brondby\Roboticket\RoboticketServiceProvider;
 
 class TestCase extends Orchestra
 {
