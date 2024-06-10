@@ -1,39 +1,6 @@
 {
     "name": "brondby/roboticket-sdk",
-    "description": "A package to communicate with the Roboticket API",
-    "keywords": [
-        "brondby",
-        "laravel",
-        "roboticket-sdk"
-    ],
-    "homepage": "https://github.com/brondby/roboticket-sdk",
-    "license": "MIT",
-    "authors": [
-        {
-            "name": "Troels Johnsen",
-            "email": "tjo@brondby.com",
-            "role": "Developer"
-        }
-    ],
-    "require": {
-        "php": "^8.2",
-        "illuminate/contracts": "^10.0||^11.0",
-        "saloonphp/laravel-plugin": "^3.0",
-        "saloonphp/pagination-plugin": "^2.0",
-        "saloonphp/saloon": "^3.0",
-        "spatie/laravel-package-tools": "^1.16"
-    },
-    "require-dev": {
-        "laravel/pint": "^1.14",
-        "larastan/larastan": "^2.9",
-        "orchestra/testbench": "^9.0.0||^8.22.0",
-        "pestphp/pest": "^2.34",
-        "pestphp/pest-plugin-arch": "^2.7",
-        "pestphp/pest-plugin-laravel": "^2.3",
-        "phpstan/extension-installer": "^1.3",
-        "phpstan/phpstan-deprecation-rules": "^1.1",
-        "phpstan/phpstan-phpunit": "^1.3"
-    },
+    "type": "library",
     "autoload": {
         "psr-4": {
             "Brondby\\Roboticket\\": "src/"
@@ -41,35 +8,35 @@
     },
     "autoload-dev": {
         "psr-4": {
-            "Brondby\\Roboticket\\Tests\\": "tests/",
-            "Workbench\\App\\": "workbench/app/"
+            "Brondby\\Roboticket\\Tests\\": "tests/"
         }
     },
-    "scripts": {
-        "post-autoload-dump": "@composer run prepare",
-        "clear": "@php vendor/bin/testbench package:purge-roboticket-sdk --ansi",
-        "prepare": "@php vendor/bin/testbench package:discover --ansi",
-        "build": [
-            "@composer run prepare",
-            "@php vendor/bin/testbench workbench:build --ansi"
-        ],
-        "start": [
-            "Composer\\Config::disableProcessTimeout",
-            "@composer run build",
-            "@php vendor/bin/testbench serve"
-        ],
-        "analyse": "vendor/bin/phpstan analyse",
-        "test": "vendor/bin/pest",
-        "test-coverage": "vendor/bin/pest --coverage",
-        "format": "vendor/bin/pint"
+    "authors": [
+        {
+            "name": "Troels Johnsen",
+            "email": "tjo@brondby.com"
+        }
+    ],
+    "require": {
+        "illuminate/contracts": "^10.0||^11.0",
+        "saloonphp/laravel-plugin": "^3.0",
+        "saloonphp/pagination-plugin": "^2.0",
+        "saloonphp/saloon": "^3.0",
+        "brondby/saloon-helpers": "dev-main",
+        "nesbot/carbon": "^3.5"
     },
+    "require-dev": {
+        "pestphp/pest": "^2.34"
+    },
+    "repositories": [
+        {
+            "type": "vcs",
+            "url": "https://github.com/brondby-if/saloon-helpers"
+        }
+    ],
     "config": {
-        "sort-packages": true,
         "allow-plugins": {
-            "pestphp/pest-plugin": true,
-            "phpstan/extension-installer": true
+            "pestphp/pest-plugin": true
         }
-    },
-    "minimum-stability": "dev",
-    "prefer-stable": true
+    }
 }
