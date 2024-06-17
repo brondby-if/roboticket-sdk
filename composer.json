@@ -22,7 +22,7 @@
         "saloonphp/laravel-plugin": "^3.0",
         "saloonphp/pagination-plugin": "^2.0",
         "saloonphp/saloon": "^3.0",
-        "brondby/saloon-helpers": "dev-main",
+        "brondby/saloon-helpers": "^1.0",
         "nesbot/carbon": "^3.5"
     },
     "require-dev": {
