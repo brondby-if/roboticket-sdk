@@ -13,6 +13,7 @@ use Saloon\PaginationPlugin\OffsetPaginator;
 use Saloon\PaginationPlugin\Paginator;
 use Saloon\Traits\Plugins\AcceptsJson;
 use Saloon\Traits\Plugins\AlwaysThrowOnErrors;
+use Saloon\Http\BaseResource;
 
 class Roboticket extends Connector implements HasPagination
 {

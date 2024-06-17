@@ -13,7 +13,6 @@ class GetAllEventsIdName extends RoboticketBaseRequest
     protected function defaultQuery(): array
     {
         return [
-            // 'from' => Carbon::now()->subDays(30)->toAtomString(),
             'from' => Carbon::now()->subDays(30)->toAtomString(),
             'to' => Carbon::now()->toAtomString(),
         ];
