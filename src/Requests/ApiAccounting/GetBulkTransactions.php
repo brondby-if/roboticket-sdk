@@ -1,9 +1,10 @@
 <?php
 
-namespace Brondby\Roboticket\Requests\Api;
+namespace Brondby\Roboticket\Requests\ApiAccounting;
 
 use Brondby\Roboticket\Data\RoboticketTransaction;
 use Brondby\Roboticket\Requests\RoboticketBaseRequest;
+use Carbon\Carbon;
 use Saloon\Enums\Method;
 use Saloon\Http\Response;
 use Saloon\PaginationPlugin\Contracts\Paginatable;
@@ -15,8 +16,8 @@ class GetBulkTransactions extends RoboticketBaseRequest implements Paginatable
     protected function defaultQuery(): array
     {
         return [
-            'from' => now()->subDays(1)->toAtomString(),
-            'to' => now()->toAtomString(),
+            'from' => Carbon::now()->subDays(1)->toAtomString(),
+            'to' => Carbon::now()->toAtomString(),
         ];
     }
 
