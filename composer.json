@@ -1,6 +1,6 @@
 {
     "name": "brondby/roboticket-sdk",
-    "description": "This is my package roboticket-sdk",
+    "description": "A SDK for working with the Roboticket API",
     "keywords": [
         "brondby",
         "roboticket-sdk"
