@@ -2,7 +2,6 @@
 
 namespace Brondby\Roboticket;
 
-
 use Illuminate\Support\Facades\Config;
 use Saloon\Contracts\Authenticator;
 use Saloon\Http\Connector;
@@ -13,7 +12,6 @@ use Saloon\PaginationPlugin\OffsetPaginator;
 use Saloon\PaginationPlugin\Paginator;
 use Saloon\Traits\Plugins\AcceptsJson;
 use Saloon\Traits\Plugins\AlwaysThrowOnErrors;
-use Saloon\Http\BaseResource;
 
 class Roboticket extends Connector implements HasPagination
 {
@@ -21,8 +19,6 @@ class Roboticket extends Connector implements HasPagination
 
     /**
      * The Base URL of the API
-     *
-     * @return string
      */
     public function resolveBaseUrl(): string
     {
@@ -43,13 +39,13 @@ class Roboticket extends Connector implements HasPagination
 
             protected function isLastPage(Response $response): bool
             {
-                return (int)$response->json('Result.Count') < $this->perPageLimit;
+                return (int) $response->json('Result.Count') < $this->perPageLimit;
             }
 
             protected function getPageItems(Response $response, Request $request): array
             {
                 return $response->dto();
-//                return $response->json('Result.Products');
+                //                return $response->json('Result.Products');
             }
 
             protected function applyPagination(Request $request): Request

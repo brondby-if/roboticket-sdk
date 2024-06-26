@@ -12,7 +12,7 @@ class GetBulkMembershipsByID extends RoboticketBaseRequest
     protected function defaultQuery(): array
     {
         return [
-            'membershipId' => $this->membershipId
+            'membershipId' => $this->membershipId,
         ];
     }
 
@@ -32,8 +32,6 @@ class GetBulkMembershipsByID extends RoboticketBaseRequest
 
     /**
      * Define the endpoint for the request
-     *
-     * @return string
      */
     public function resolveEndpoint(): string
     {

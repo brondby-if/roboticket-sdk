@@ -9,10 +9,8 @@ use Spatie\LaravelData\Mappers\SnakeCaseMapper;
 #[MapOutputName(SnakeCaseMapper::class)]
 class RoboticketItem extends Data
 {
-
     public function __construct(
         public int $Id,
         public int $ProductId,
-    )
-    {}
+    ) {}
 }

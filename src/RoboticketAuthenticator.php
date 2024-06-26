@@ -2,8 +2,8 @@
 
 namespace Brondby\Roboticket;
 
-use Saloon\Http\PendingRequest;
 use Saloon\Contracts\Authenticator;
+use Saloon\Http\PendingRequest;
 
 class RoboticketAuthenticator implements Authenticator
 {

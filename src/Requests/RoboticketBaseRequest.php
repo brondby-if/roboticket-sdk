@@ -8,9 +8,10 @@ use Saloon\Http\Request;
 
 abstract class RoboticketBaseRequest extends Request
 {
-    use HasQueryValidation, HasAvailableQueryParams;
+    use HasAvailableQueryParams, HasQueryValidation;
 
-    public function __construct(array $query = []) {
+    public function __construct(array $query = [])
+    {
         $this->query()->merge($query);
     }
 }

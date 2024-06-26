@@ -12,7 +12,7 @@ class GetBulkPackagesByID extends RoboticketBaseRequest
     public function rules(): array
     {
         return [
-          'seasonTicketId' => 'required|integer|numeric',
+            'seasonTicketId' => 'required|integer|numeric',
         ];
     }
 
@@ -25,8 +25,6 @@ class GetBulkPackagesByID extends RoboticketBaseRequest
 
     /**
      * Define the endpoint for the request
-     *
-     * @return string
      */
     public function resolveEndpoint(): string
     {
