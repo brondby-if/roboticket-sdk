@@ -1,8 +1,8 @@
 # This is my package roboticket-sdk
 
 [![Latest Version on Packagist](https://img.shields.io/packagist/v/brondby/roboticket-sdk.svg?style=flat-square)](https://packagist.org/packages/brondby/roboticket-sdk)
-[![Tests](https://img.shields.io/github/actions/workflow/status/brondby/roboticket-sdk/run-tests.yml?branch=main&label=tests&style=flat-square)](https://github.com/brondby/roboticket-sdk/actions/workflows/run-tests.yml)
-[![Total Downloads](https://img.shields.io/packagist/dt/brondby/roboticket-sdk.svg?style=flat-square)](https://packagist.org/packages/brondby/roboticket-sdk)
+[![Tests](https://img.shields.io/github/actions/workflow/status/brondby-if/roboticket-sdk/run-tests.yml?branch=main&label=tests&style=flat-square)](https://github.com/brondby/roboticket-sdk/actions/workflows/run-tests.yml)
+[![Total Downloads](https://img.shields.io/packagist/dt/brondby-if/roboticket-sdk.svg?style=flat-square)](https://packagist.org/packages/brondby/roboticket-sdk)
 
 This is where your description should go. Try and limit it to a paragraph or two. Consider adding a small example.
 
