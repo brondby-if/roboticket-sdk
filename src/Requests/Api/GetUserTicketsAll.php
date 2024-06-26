@@ -3,7 +3,6 @@
 namespace Brondby\Roboticket\Requests\Api;
 
 use Brondby\Roboticket\Requests\RoboticketBaseRequest;
-use Carbon\Carbon;
 use Saloon\Enums\Method;
 
 class GetUserTicketsAll extends RoboticketBaseRequest
@@ -21,15 +20,13 @@ class GetUserTicketsAll extends RoboticketBaseRequest
     public static function availableParameters(): array
     {
         return [
-            'userId' =>'Integer',
+            'userId' => 'Integer',
             'fromEventDate' => 'DateTime',
         ];
     }
 
     /**
      * Define the endpoint for the request
-     *
-     * @return string
      */
     public function resolveEndpoint(): string
     {

@@ -2,7 +2,6 @@
 
 namespace Brondby\Roboticket\Data;
 
-use Carbon\Carbon;
 use Saloon\Contracts\Paginator;
 use Saloon\Http\Response;
 use Spatie\LaravelData\Attributes\MapOutputName;
@@ -17,11 +16,10 @@ class RoboticketStadium extends Data
         public string $Id,
         public string $Name,
         public string $StadiumCode,
-    )
-    {}
+    ) {}
 
-//    public static function fromResponse(Response|Paginator $response): DataCollection
-//    {
-//        return self::collection($response->collect('Result'));
-//    }
+    //    public static function fromResponse(Response|Paginator $response): DataCollection
+    //    {
+    //        return self::collection($response->collect('Result'));
+    //    }
 }

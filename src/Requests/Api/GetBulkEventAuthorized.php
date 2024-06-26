@@ -12,7 +12,7 @@ class GetBulkEventAuthorized extends RoboticketBaseRequest
     public function rules(): array
     {
         return [
-            'eventId' => 'required|integer|numeric'
+            'eventId' => 'required|integer|numeric',
         ];
     }
 
@@ -25,8 +25,6 @@ class GetBulkEventAuthorized extends RoboticketBaseRequest
 
     /**
      * Define the endpoint for the request
-     *
-     * @return string
      */
     public function resolveEndpoint(): string
     {

@@ -20,5 +20,4 @@ class GetUser extends RoboticketBaseRequest
             'id' => 'required|integer',
         ];
     }
-
 }

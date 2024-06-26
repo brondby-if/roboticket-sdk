@@ -36,8 +36,6 @@ class GetAllEventsIdName extends RoboticketBaseRequest
 
     /**
      * Define the endpoint for the request
-     *
-     * @return string
      */
     public function resolveEndpoint(): string
     {

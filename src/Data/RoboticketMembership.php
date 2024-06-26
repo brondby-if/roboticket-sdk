@@ -6,7 +6,5 @@ use Spatie\LaravelData\Data;
 
 class RoboticketMembership extends Data
 {
-    public function __construct()
-    {
-    }
+    public function __construct() {}
 }
