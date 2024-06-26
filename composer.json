@@ -1,23 +1,21 @@
 {
     "name": "brondby/roboticket-sdk",
-    "type": "library",
-    "autoload": {
-        "psr-4": {
-            "Brondby\\Roboticket\\": "src/"
-        }
-    },
-    "autoload-dev": {
-        "psr-4": {
-            "Brondby\\Roboticket\\Tests\\": "tests/"
-        }
-    },
+    "description": "This is my package roboticket-sdk",
+    "keywords": [
+        "brondby",
+        "roboticket-sdk"
+    ],
+    "homepage": "https://github.com/brondby/roboticket-sdk",
+    "license": "MIT",
     "authors": [
         {
             "name": "Troels Johnsen",
-            "email": "tjo@brondby.com"
+            "email": "tjo@brondby.com",
+            "role": "Developer"
         }
     ],
     "require": {
+        "php": "^8.1",
         "illuminate/contracts": "^10.0||^11.0",
         "saloonphp/laravel-plugin": "^3.0",
         "saloonphp/pagination-plugin": "^2.0",
@@ -26,7 +24,8 @@
         "nesbot/carbon": "^3.5"
     },
     "require-dev": {
-        "pestphp/pest": "^2.34"
+        "pestphp/pest": "^2.20",
+        "laravel/pint": "^1.0"
     },
     "repositories": [
         {
@@ -34,9 +33,28 @@
             "url": "https://github.com/brondby-if/saloon-helpers"
         }
     ],
-    "config": {
-        "allow-plugins": {
-            "pestphp/pest-plugin": true
+    "autoload": {
+        "psr-4": {
+            "Brondby\\Roboticket\\": "src"
         }
-    }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Brondby\\Roboticket\\Tests\\": "tests"
+        }
+    },
+    "scripts": {
+        "test": "vendor/bin/pest",
+            "test-coverage": "vendor/bin/pest --coverage",
+        "format": "vendor/bin/pint"
+    },
+    "config": {
+        "sort-packages": true,
+        "allow-plugins": {
+            "pestphp/pest-plugin": true,
+            "phpstan/extension-installer": true
+        }
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true
 }
