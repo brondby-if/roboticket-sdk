@@ -2,6 +2,7 @@
 
 namespace Brondby\Roboticket;
 
+use Exception;
 use Illuminate\Support\Facades\Config;
 use Saloon\Contracts\Authenticator;
 use Saloon\Http\Connector;
@@ -15,6 +16,14 @@ use Saloon\Traits\Plugins\AlwaysThrowOnErrors;
 
 class Roboticket extends Connector implements HasPagination
 {
+    public function __construct(
+        public RoboticketConfig|array $settings
+    ) {
+        if(is_array($this->settings)){
+            $this->settings = RoboticketConfig::fromArray($this->settings);
+        }
+    }
+
     use AcceptsJson, AlwaysThrowOnErrors;
 
     /**
@@ -22,13 +31,12 @@ class Roboticket extends Connector implements HasPagination
      */
     public function resolveBaseUrl(): string
     {
-        return Config::get('services.roboticket.base_uri');
-        // return config('services.roboticket.key');
+        return $this->settings->base_url;
     }
 
     protected function defaultAuth(): ?Authenticator
     {
-        return new RoboticketAuthenticator(Config::get('services.roboticket.key'), Config::get('services.roboticket.client_id'));
+        return new RoboticketAuthenticator($this->settings->key, $this->settings->client_id);
     }
 
     public function paginate(Request $request): Paginator
