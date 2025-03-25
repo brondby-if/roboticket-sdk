@@ -2,8 +2,6 @@
 
 namespace Brondby\Roboticket;
 
-use Exception;
-use Illuminate\Support\Facades\Config;
 use Saloon\Contracts\Authenticator;
 use Saloon\Http\Connector;
 use Saloon\Http\Request;
@@ -19,7 +17,7 @@ class Roboticket extends Connector implements HasPagination
     public function __construct(
         public RoboticketConfig|array $settings
     ) {
-        if(is_array($this->settings)){
+        if (is_array($this->settings)) {
             $this->settings = RoboticketConfig::fromArray($this->settings);
         }
     }
