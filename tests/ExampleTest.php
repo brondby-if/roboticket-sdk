@@ -1,7 +1,6 @@
 <?php
 
 use Brondby\Roboticket\Roboticket;
-use function PHPUnit\Framework\assertTrue;
 
 it('Roboticket connector throws exception when missing configuration', function () {
     $roboticket = new Roboticket([]);
