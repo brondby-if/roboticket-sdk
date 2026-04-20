@@ -2,6 +2,16 @@
 
 All notable changes to `roboticket-sdk` will be documented in this file.
 
+## v0.3.0 - 2026-04-20
+
+### What's Changed
+
+* Bump dependabot/fetch-metadata from 2.3.0 to 2.4.0 by @dependabot[bot] in https://github.com/brondby-if/roboticket-sdk/pull/7
+* Bump aglipanci/laravel-pint-action from 2.5 to 2.6 by @dependabot[bot] in https://github.com/brondby-if/roboticket-sdk/pull/9
+* Bump dependabot/fetch-metadata from 2.4.0 to 2.5.0 by @dependabot[bot] in https://github.com/brondby-if/roboticket-sdk/pull/13
+
+**Full Changelog**: https://github.com/brondby-if/roboticket-sdk/compare/v0.2.0...v0.3.0
+
 ## v0.1.3 - 2025-01-30
 
 ### What's Changed
